@@ -1,9 +1,9 @@
 from PIL import Image
 import face_recognition
-
+import cv2
 # Load the jpg file into a numpy array
 # image = face_recognition.load_image_file("biden.jpg")
-image = face_recognition.load_image_file("../vid_cap/TVXQ/frame180.jpg")//
+image = face_recognition.load_image_file("../vid_cap/TVXQ/frame1800.jpg")
 
 
 # Find all the faces in the image using the default HOG-based model.
@@ -22,4 +22,5 @@ for face_location in face_locations:
     # You can access the actual face itself like this:
     face_image = image[top:bottom, left:right]
     pil_image = Image.fromarray(face_image)
-    pil_image.show()
+    # pil_image.show()
+    cv2.imwrite("../img_identify/template1.jpg", face_image)

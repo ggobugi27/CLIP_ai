@@ -2,14 +2,15 @@ from PIL import Image
 import cv2
 import numpy as np
 
-# from matplotlib import pyplot as plt
+from matplotlib import pyplot as plt
 # import matplotlib
 
-img = cv2.imread('../vid_cap/TVXQ/frame1890.jpg',0)
+img = cv2.imread('../vid_cap/TVXQ/frame7020.jpg',0)
 show_img = Image.fromarray(img)
-show_img.show()
 img2 = img.copy()
-template = cv2.imread('../vid_cap/TVXQ/frame180.jpg',0)
+template = cv2.imread('template.jpg',0)
+show_template = Image.fromarray(template)
+show_template.show()
 w, h = template.shape[::-1]
 
 # All the 6 methods for comparison in a list
@@ -33,13 +34,13 @@ for meth in methods:
 
     cv2.rectangle(img,top_left, bottom_right, 255, 2)
     # cv2.imshow('image', img)
-    show_img = Image.fromarray(res)
-    show_img.show()
+    # show_img = Image.fromarray(res)
+    # show_img.show()
     # cv2.imshow('image', show_img)
-    # plt.subplot(121),plt.imshow(res,cmap = 'gray')
-    # plt.title('Matching Result'), plt.xticks([]), plt.yticks([])
-    # plt.subplot(122),plt.imshow(img,cmap = 'gray')
-    # plt.title('Detected Point'), plt.xticks([]), plt.yticks([])
-    # plt.suptitle(meth)
+    plt.subplot(121),plt.imshow(res,cmap = 'gray')
+    plt.title('Matching Result'), plt.xticks([]), plt.yticks([])
+    plt.subplot(122),plt.imshow(img,cmap = 'gray')
+    plt.title('Detected Point'), plt.xticks([]), plt.yticks([])
+    plt.suptitle(meth)
 
-    # plt.show()
+    plt.show()
