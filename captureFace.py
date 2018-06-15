@@ -4,7 +4,7 @@ import numpy as np
 import os
 import face_recognition
 
-def captureVid(videoFile, seconds):#mp4 file, seconds to be captured 
+def captureFace(videoFile, seconds):#mp4 file, interval of seconds to be captured 
 	os.mkdir(videoFile[0:3])
 	vidcap = cv2.VideoCapture(videoFile)# for face_location in face_locations:
 	success,image = vidcap.read()
@@ -23,4 +23,4 @@ def captureVid(videoFile, seconds):#mp4 file, seconds to be captured
 				cv2.imwrite("%s/face%d.jpg" % (videoFile[0:3], i), image)
 				i=i+1
 
-captureVid('BTS.mp4', 1.5)
+# captureVid('BTS.mp4', 1.5)
