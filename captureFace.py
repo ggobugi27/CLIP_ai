@@ -4,8 +4,10 @@ import numpy as np
 import os
 import face_recognition
 
-def captureFace(videoFile, seconds):#mp4 file, interval of seconds to be captured 
-	os.mkdir(videoFile[0:3])
+def captureFace(videoFile, seconds):#mp4 file, interval of seconds to be captured
+	name = videoFile.split('.')[0]
+	if not os.pathexists(name): 
+		os.mkdir(name)
 	vidcap = cv2.VideoCapture(videoFile)# for face_location in face_locations:
 	success,image = vidcap.read()
 	fps = vidcap.get(cv2.CAP_PROP_FPS)
@@ -20,7 +22,7 @@ def captureFace(videoFile, seconds):#mp4 file, interval of seconds to be capture
 			print face_num
 			if (face_num > 0): 
 				print "%s/face%d.jpg"
-				cv2.imwrite("%s/face%d.jpg" % (videoFile[0:3], i), image)
+				cv2.imwrite("%s/face%d.jpg" % (name, i), image)
 				i=i+1
 
 # captureVid('BTS.mp4', 1.5)
