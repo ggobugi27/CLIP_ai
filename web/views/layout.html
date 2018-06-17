@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>CLIP | cut your star into a clip</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Itim" rel="stylesheet"/>
+    <link href="/stylesheets/style.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <!-- Wrap all page content here -->
+    <div id="wrap">
+
+      <!-- Fixed navbar -->
+      
+      <div class = 'header'>
+      <img src = './images/clip.png'>
+      <h2>CLIP will CLIP your star</h2> 
+      <script src="http://www.yvoschaap.com/ytpage/ytembed.js"></script>
+      <div id="ytThumbs"></div>
+      <form action="http://www.youtube.com/results" method="get" target="_blank" >
+        <input name="search_query" type="text" maxlength="128" />
+        <input type="submit" value="Search" />
+      </form>
+    </div>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/MBNQgq56egk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    <button name='clip-video'>Clip Video</button>
+    <button name='clip-image'>Clip Image</button>
+   
+    <div id='img-block'></div>
+      <!-- Begin page content -->
+      <div class="container">
+        {% block content %}Welcome to CLIP{% endblock %}
+      </div> <!-- end container -->
+      
+    </div>
+
+    <div id="footer">
+      <div class="container">
+        <p class="text-muted">CLIP AI, Kate HK Yun</p>
+      </div>
+    </div>
+
+  </body>
+</html>

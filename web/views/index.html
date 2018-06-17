@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block content %}
+  
+  <div class="page-header">
+    <h2>CLIP HAS CLIPPED IMAGES!</h2>
+  </div>
+  <div class="row">
+    <div class="col-md-3">
+      
+    </div>
+    <div class="col-md-9">
+    
+      <!-- display images here -->
+      {% for image in imageList %}
+      
+	<div class = "imagebox">
+		<div class= "clip-image">
+      <img id = 'clip-img' src={{image.url}}>
+			<p>{{image.url}}</p>
+			<p>{{image.info}}</p>
+		</div>
+	</div>
+
+      {% endfor %}
+      
+    </div>
+  </div>
+    
+{% endblock %}
