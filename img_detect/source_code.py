@@ -3,7 +3,7 @@ import face_recognition
 import cv2
 # Load the jpg file into a numpy array
 # image = face_recognition.load_image_file("biden.jpg")
-image = face_recognition.load_image_file("../vid_cap/TVXQ/frame1800.jpg")
+image = face_recognition.load_image_file("../big_bang/G-Dragon/pic_0015.jpg")
 
 
 # Find all the faces in the image using the default HOG-based model.

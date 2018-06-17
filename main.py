@@ -6,5 +6,4 @@ def getImages(url, name, seconds) :
 	fy.download(url, name)
 	cf.captureFace(name + '.mkv', seconds)
 
-
-# getImages('https://www.youtube.com/watch?v=BQlsiVWWIx4', 'WAN.mp4', 10)
+getImages('https://www.youtube.com/watch?v=iIPH8LFYFRk', 'era', 3)
