@@ -81,7 +81,7 @@ if __name__ == "__main__":
   input_width = 299
   input_mean = 0
   input_std = 255
-  input_layer = "input"
+  input_layer = "Mul"
   output_layer = "InceptionV3/Predictions/Reshape_1"
 
   parser = argparse.ArgumentParser()
