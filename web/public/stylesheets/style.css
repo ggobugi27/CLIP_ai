@@ -1,19 +1,43 @@
 body{
 	font-family: 'Itim', cursive;
+	background-color: #c0deed;
 }
 
-/*img{
-	width : 560px;
-	height: 315px;
-}*/
+.button4{
+	background-color: #2C3E50;
+	color: white;
+	text-align: center;
+	width : 100px;
+	height : 30px;
+	font-family: 'Itim', cursive;
+}
+.center-div{
+	display: flex;
+	justify-content: space-around;
+}
 
-#youtube-text{
-	font: sans-serif;
+.center-button{
+	display: flex;
+	justify-content: center;
 }
 
 #clip-img{
- 	width: 480px;
- 	height: 270px;  
+ 	width: 25%;
+ 	height: 25%;  
 }
 
+.header{
 
+}
+
+h1, h2, h3, h4, h5{
+	text-align: center;
+}
+
+a{
+	margin: auto;
+}
+
+p{
+	text-align: right;
+}

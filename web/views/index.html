@@ -2,29 +2,51 @@
 
 {% block content %}
   
-  <div class="page-header">
-    <h2>CLIP HAS CLIPPED IMAGES!</h2>
-  </div>
+  
   <div class="row">
     <div class="col-md-3">
-      
+      <br/>
+      <h2>CLIP will Find Big Bang Members in the Video and CLIP for you</h2> 
+      <div class='center-div'>
+        <div id="ytplayer"></div>
+      </div>
+      <br/>
+      <div class='center-button'>
+        <button id='clip-video' class = 'button4'>Clip Video</button><br/>
+        <button id='clip-image' class="button4">Clip Images</button>
+      </div>
     </div>
-    <div class="col-md-9">
-    
+
+      <!-- display video here -->
+    <div class = "videobox">
+      <h2>CLIP HAS CLIPPED THE VIDEO OF G-DRAGON!</h2>
+        <div class='center-div'>
+        <p>
+          <video width="640" height="480" controls>
+          <source src="test_2_gd.mp4" type='video/mp4'>
+          Sorry, requested services is not ready at this point
+          </video>
+        </p>
+      </div>
+    </div>
+
       <!-- display images here -->
-      {% for image in imageList %}
+  	<div class = "imagebox">
+      <h2>CLIP HAS CLIPPED IMAGES OF G-DRAGON!</h2>
       
-	<div class = "imagebox">
-		<div class= "clip-image">
-      <img id = 'clip-img' src={{image.url}}>
-			<p>{{image.url}}</p>
-			<p>{{image.info}}</p>
-		</div>
-	</div>
+      {% for image in imageList %}
+  		<div class= "clip-image">
+        <div class='center-div'>
+        <img id = 'clip-img' src={{image.url}}>
+  			<span>{{image.info}}</span>
+        </div>
+  		</div>
+      <br/>
+  	</div>
 
       {% endfor %}
       
-    </div>
+
   </div>
-    
+  
 {% endblock %}
