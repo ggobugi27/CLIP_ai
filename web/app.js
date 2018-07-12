@@ -8,7 +8,6 @@ const fs = require('fs');
 const path = require('path');
 const mime = require('mime');
 const bodyParser = require('body-parser');
-const socketio = require('socket.io');
 
 // templating boilerplate setup
 app.engine('html', nunjucks.render); // how to render html templates
@@ -25,9 +24,7 @@ app.use(bodyParser.json()); // would be for AJAX requests
 
 // start the server
 const server = app.listen(1337, () => console.log('listening on port 1337'));
-const io = socketio.listen(server);
 
 app.use(express.static(path.join(__dirname, '/public')));
 app.use(express.static(path.join(__dirname, '/client')));
 // modular routing that uses io inside it
-app.use('/', makesRouter(io));
