@@ -4,6 +4,8 @@
 
 Have you ever wanted to optimize video watching experience by cutting out parts you don't want? Clip will smartly curate through the clip and remove all the parts you don't need to watch
 
+[Live Demo](https://www.youtube.com/watch?v=cxLmIFy8x_E)
+
 ## Motivated
 
 CLIP is motivated by a business idea pitch at CJ E&M to implement image recognition on a video platform to provide optimal user experience.
