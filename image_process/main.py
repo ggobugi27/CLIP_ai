@@ -4,15 +4,14 @@ import sys
 import warnings
 
 warnings.filterwarnings('ignore')
-arg1 = sys.argv[1] #value1
-arg2 = sys.argv[2] #value2
-arg3 = float(sys.argv[3]) #value3
-
+# arg1 = sys.argv[1] #value1, youtube url
+# arg2 = sys.argv[2] #value2, name of directory
+# arg3 = float(sys.argv[3]) #value3, fram capture interval in seconds
 
 def getImages(url, name, seconds) : 
 	fy.download(url, 'public/'+name)
-	return cf.captureFace('public/'+name + '.mkv', seconds)
+	return cf.captureFace('public/'+name + '.mkv', seconds)#assume video is mkv (Refactor later)
 
-getImages(arg1, arg2, arg3)
+# getImages(arg1, arg2, arg3)
 
-# getImages("https://www.youtube.com/watch?v=9jTo6hTZmiQ", 'test1', 1)
+# getImages("https://www.youtube.com/watch?v=9jTo6hTZmiQ", 'test1', 30)#for test

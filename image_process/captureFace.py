@@ -3,7 +3,7 @@ import math
 import numpy as np
 import os
 import face_recognition
-from detect_face import numFace
+# from detect_face import numFace
 from label_image import readFace
 
 import warnings
