@@ -30,11 +30,11 @@ let runPy = (videoUrl, name = 'test1', interval=10) => {
   });
 }
 
-module.exports = io => {
+module.exports = () => {
   // a reusable function
   const respondWithAllImages = (req, res, next) => {
     let clips = ImageClips.clipImages('test2');
-    clips.sort(function(a,b) {return (a.info > b.info) ? 1 : ((b.info > a.info) ? -1 : 0);} ); 
+    clips.sort((a,b) => (a.info > b.info) ? 1 : ((b.info > a.info) ? -1 : 0)); 
     // console.log(clips)
     res.render('index', {
       title: 'CLIP.ai',
