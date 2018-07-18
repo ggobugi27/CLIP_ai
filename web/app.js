@@ -3,7 +3,6 @@ const express = require('express');
 const app = express();
 const morgan = require('morgan');
 const nunjucks = require('nunjucks');
-const makesRouter = require('./routes');
 const fs = require('fs');
 const path = require('path');
 const mime = require('mime');
@@ -27,8 +26,5 @@ const server = app.listen(1337, () => console.log('listening on port 1337'));
 
 app.use(express.static(path.join(__dirname, '/public')));
 app.use(express.static(path.join(__dirname, '/client')));
-// modular routing that uses io inside it
 
-app.get('/', (req, res) =>{
-    res.render('index');
-})
+app.use(require('./routes'))
