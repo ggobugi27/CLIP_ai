@@ -1,4 +1,8 @@
 image_process/big_bang
+image_process/__pycache__
+.*
+image_process/.*
+image_process/big_bang
 web/public/test1.mkv
 web/public/test1.mkv
 web/public/test_2_gd.mp4

@@ -3,7 +3,7 @@ import math
 import numpy as np
 import os
 import face_recognition
-from detect_face import numFace
+# from detect_face import numFace
 from label_image import readFace
 
 import warnings
@@ -15,7 +15,6 @@ warnings.filterwarnings('ignore')
 def captureFace(videoFile, seconds):  # mp4 file, interval of seconds to be captured
     name = videoFile[0:-4]
     # os.mkdir(name)
-
     vidcap = cv2.VideoCapture(videoFile)
     success, image = vidcap.read()
     fps = vidcap.get(cv2.CAP_PROP_FPS)
