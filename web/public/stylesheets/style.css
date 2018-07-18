@@ -27,7 +27,8 @@ body{
 }
 
 .header{
-
+	display: flex;
+	justify-content: space-around;
 }
 
 h1, h2, h3, h4, h5{
