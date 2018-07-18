@@ -2,9 +2,13 @@ const express = require('express');
 const router = express.Router();
 const ImageClips = require('../ImageClips');
 const runPy = require('./runPy')
-const folderName = 'test2';
+const folderName = 'test2';//hardcoded
+
+module.exports = router;
+console.log('something')
 
 const respondWithAllImages = (req, res, next) => {
+  console.log('aa')
   let clips = ImageClips.clipImages(folderName);
   clips.sort((a,b) => (a.info > b.info) ? 1 : ((b.info > a.info) ? -1 : 0)); 
   res.render('index', {
@@ -23,4 +27,8 @@ router.post('/api/video', (req, res, next) => {
   res.redirect('/');
 });
 
-module.exports = router;
+router.use((req, res, next) => {
+  const error = new Error('Not Found')
+  error.status = 404
+  next(error)
+})
